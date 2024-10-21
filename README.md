@@ -17,7 +17,7 @@ Make sure you have the following installed:
 
 ```bash
 git clone https://github.com/ayeshdev/customer_address_book_server.git
-cd your-project
+cd customer_address_book_server
 ```
 
 ### 2. Install Dependencies
