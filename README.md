@@ -90,6 +90,7 @@ You can run the application’s tests using:
 ```bash
 php artisan test
 ```
+
 ### 9. Seed the Database Again
 
 If your application uses seed data, you can seed the database:
@@ -97,8 +98,31 @@ If your application uses seed data, you can seed the database:
 ```bash
 php artisan db:seed
 ```
-----------------------------------------------------------------
-# Admin Credintials
 
-## Admin Email -> admin@cab.com
-## Admin Password -> admin@1234
+---
+
+## Admin Credentials (after seeding the database)
+
+- **Admin Email**: admin@cab.com
+- **Admin Password**: admin@1234
+
+---
+
+## Testing API
+
+### 1. Admin Registration
+- To register an admin, you can either:
+  - Use the `db:seed` command to create an admin user.
+  - Or use the default **Admin Register** API route (temporarily for testing purposes).
+- **Important**: The default register API route and the `register` function in the `AuthController` will be removed after testing.
+
+### 2. Authentication (Bearer Token)
+- For testing **Products** and **Customer** sections, you need to pass a **Bearer Token** in the request headers.
+- You can generate this token by logging into the system using the **Login API**.
+  - Upon successful login, the token will be returned in the response.
+  - Include this token in the headers of all further requests to authenticate the user.
+
+#### Example Header:
+```bash
+Authorization: Bearer {your_token_here}
+```
