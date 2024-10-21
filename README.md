@@ -16,7 +16,7 @@ Make sure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-repo/your-project.git
+git clone https://github.com/ayeshdev/customer_address_book_server.git
 cd your-project
 ```
 
