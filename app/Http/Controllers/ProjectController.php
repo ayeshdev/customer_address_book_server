@@ -27,7 +27,6 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
 
-        \Log::info("request" . " " . $request);
         // Validate the incoming request data
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
@@ -71,7 +70,6 @@ class ProjectController extends Controller
 
         $project->load('customers');
 
-        \Log::info("project" . " " . $project);
         return [
             'project' => $project,
         ];
