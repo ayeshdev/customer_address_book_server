@@ -19,8 +19,7 @@ class CustomerControllerTest extends TestCase
         $this->actingAs($user, 'sanctum');
     }
 
-    /** @test */
-    public function it_returns_a_list_of_customers()
+    public function test_it_returns_a_list_of_customers()
     {
         // Authenticate the user
         $this->authenticate();
@@ -40,8 +39,8 @@ class CustomerControllerTest extends TestCase
             ]);
     }
 
-    /** @test */
-    public function it_creates_a_customer_with_addresses()
+
+    public function test_it_creates_a_customer_with_addresses()
     {
         // Authenticate the user
         $this->authenticate();
@@ -68,8 +67,8 @@ class CustomerControllerTest extends TestCase
         $this->assertDatabaseHas('addresses', ['city' => 'Test City']);
     }
 
-    /** @test */
-    public function it_shows_a_customer_with_addresses()
+
+    public function test_it_shows_a_customer_with_addresses()
     {
         // Authenticate the user
         $this->authenticate();
@@ -89,8 +88,8 @@ class CustomerControllerTest extends TestCase
             ]);
     }
 
-    /** @test */
-    public function it_updates_a_customer_and_addresses()
+
+    public function test_it_updates_a_customer_and_addresses()
     {
         // Authenticate the user
         $this->authenticate();
@@ -120,8 +119,8 @@ class CustomerControllerTest extends TestCase
         $this->assertDatabaseHas('addresses', ['city' => 'New City']);
     }
 
-    /** @test */
-    public function it_searches_for_customers()
+
+    public function test_it_searches_for_customers()
     {
         // Authenticate the user
         $this->authenticate();
@@ -138,8 +137,8 @@ class CustomerControllerTest extends TestCase
             ->assertJsonFragment(['name' => 'John Doe']);
     }
 
-    /** @test */
-    public function it_deletes_a_customer()
+
+    public function test_it_deletes_a_customer()
     {
         // Authenticate the user
         $this->authenticate();
