@@ -1,5 +1,5 @@
 
-# Laravel API Application
+# Customer Address Book Server Application
 
 This is a Laravel-based API application. Follow the instructions below to get started with setting up and running the application.
 
