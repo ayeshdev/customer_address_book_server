@@ -36,7 +36,7 @@ composer install
 cp .env.example .env
 ```
 
-- Configure your database and other environment variables in the `.env` file. 
+- Uncomment the `DB_CONNECTION`, `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME`, and `DB_PASSWORD` variables and update them with your database credentials.
 
 Example for MySQL:
 
